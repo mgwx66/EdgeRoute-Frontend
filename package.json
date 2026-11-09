@@ -1,0 +1,21 @@
+{
+  "name": "edgeroute-frontend",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@10.34.3",
+  "scripts": {
+    "dev": "pnpm --parallel --filter @edgeroute/user --filter @edgeroute/admin dev",
+    "dev:user": "pnpm --filter @edgeroute/user dev",
+    "dev:admin": "pnpm --filter @edgeroute/admin dev",
+    "build": "pnpm --filter @edgeroute/user --filter @edgeroute/admin build",
+    "typecheck": "pnpm -r typecheck",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "jsdom": "^26.1.0",
+    "typescript": "~5.9.3",
+    "vitest": "^3.2.7"
+  }
+}
